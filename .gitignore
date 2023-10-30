@@ -1,1 +1,4 @@
-/newenv
+.venv
+.newenv
+venv/
+newenv/
