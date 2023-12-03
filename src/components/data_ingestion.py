@@ -2,6 +2,7 @@ import os
 import sys 
 from src.exception import CustomException
 from src.logger import logging
+from src.components.data_transformation import *
 import pandas as pd
 from dataclasses import dataclass
 from sklearn.model_selection import train_test_split
@@ -26,8 +27,10 @@ class DataIngestion:
             logging.info('Read dataset from dataframe')
 
             os.makedirs(os.path.dirname(self.ingestionConfig.train_data_path), exist_ok=True)
-
+            
+            df.reset_index(drop=True, inplace=True)
             df.to_csv(self.ingestionConfig.raw_data_path, index=False, header=True)
+            
             
             logging.info("Train Test split initiated")
             train_data, test_data = train_test_split(df, test_size=0.20, random_state=42)
@@ -49,5 +52,10 @@ class DataIngestion:
 
 if __name__=="__main__":
     obj = DataIngestion()
-    obj.InititateDataIngestion()
+    # obj.InititateDataIngestion()
+    train_data, test_data = obj.InititateDataIngestion()
+
+    data_transformation = DataTransformation()
+    data_transformation.initiate_data_transformation(train_data, test_data)
+
 
