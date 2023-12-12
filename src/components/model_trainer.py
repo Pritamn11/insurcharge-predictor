@@ -48,7 +48,7 @@ class ModelTrainer:
                 "Linear Regression" : LinearRegression(),
                 "XGBRegressor" : XGBRegressor(),
                 "CatBoosting Regressor" : CatBoostRegressor(verbose=False),
-                "AdaBoost Regressor" : AdaBoostRegressor(),
+                "AdaBoost Regressor" : AdaBoostRegressor()
 
             }
 
@@ -116,4 +116,5 @@ class ModelTrainer:
 
         except Exception as e:
             raise CustomException(e,sys)
-        
+
+

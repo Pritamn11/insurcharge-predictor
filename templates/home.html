@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @keyframes dance {
+            0% {
+                transform: translateX(0);
+                color: red;
+            }
+            25% {
+                transform: translateX(10px);
+                color: blue;
+            }
+            50% {
+                transform: translateX(0);
+                color: green;
+            }
+            75% {
+                transform: translateX(-10px);
+                color: orange;
+            }
+            100% {
+                transform: translateX(0);
+                color: purple;
+            }
+        }
+
+        h1 {
+            animation: dance 4s infinite;
+            font-family: 'Georgia', serif;
+            font-size: 56px;
+        }
+    </style>
+</head>
+<body>
+    <h1> Welcome to the home page </h1>
+</body>
+</html>
