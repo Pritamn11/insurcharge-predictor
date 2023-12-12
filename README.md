@@ -1,1 +1,1 @@
-## End to end Machine Learning Project for predicitng grade
+## End to end Machine Learning Project for predicitng insurance charges
