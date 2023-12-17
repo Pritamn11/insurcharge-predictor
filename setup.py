@@ -20,9 +20,9 @@ def get_requirements(file_path=str)->List[str]:
 
 
 setup(
-    name="grade_prediction",
+    name="charges_prediction",
     version="0.0.1",
-    description="This project aims to predict students score",
+    description="This project aims to predict insurance charges",
     author="Pritam",
     author_email="pritamnarwade11@gmail.com",
     packages=find_packages(),
